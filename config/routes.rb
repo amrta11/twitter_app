@@ -1,16 +1,14 @@
 TwitterApp::Application.routes.draw do
+  resources :users
+
   root to: 'static_pages#home'
+
+  match '/signup', to: 'users#new'
 
   # Static Pages Routes
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-
-  # User Routes
-  get 'users/new'
-
-  match '/signup', to: 'users#new'
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
