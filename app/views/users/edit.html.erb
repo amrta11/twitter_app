@@ -4,12 +4,12 @@
 
 <div class="row">
   <div class="span6 offset3">
-  	<%= form_for(@user) do |f| %>
-  	  <%= render 'fields', f: f %>
-		  <%= f.button "Save changes", class: "btn btn-primary btn-large" %>
-		<% end %>
+    <%= form_for(@user) do |f| %>
+      <%= render 'fields', f: f %>
+      <%= f.button "Save changes", class: "btn btn-primary btn-large" %>
+    <% end %>
 
-		<%= gravatar_for(@user) %>
-		<%= link_to 'change', 'http://gravatar.com/emails', target: '_blank' %>
+    <%= gravatar_for(@user) %>
+    <%= link_to 'change', 'http://gravatar.com/emails', target: '_blank' %>
   </div>
 </div>
