@@ -25,3 +25,24 @@
   </div>
   <%= link_to image_tag('rails.png', alt: 'Rails'), 'http://rubyonrails.org' %>
 <% end %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#micropost_content').keyup(function(e) {
+      var $counter, maxChar, total;
+      $counter = $('#micropost_content').val().length;
+      maxNum = 140;
+      total = maxNum - $counter
+
+      if (total < 0) {
+        $('.counter').addClass('error');
+        $('form#new_micropost :submit').prop('disabled', true);
+      } else {
+        $('form#new_micropost :submit').prop('disabled', false);
+        $('.counter').removeClass('error');
+      }
+
+      $('.counter').text(total);
+    });
+  });
+</script>

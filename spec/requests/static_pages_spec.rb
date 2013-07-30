@@ -42,6 +42,8 @@ describe "Static pages" do
           should have_selector("li##{item.id}", text: item.content)
         end
       end
+
+      it { should have_selector('span', text: "#{user.microposts.count} #{"micropost".pluralize}") }
     end
   end
 

@@ -207,19 +207,30 @@ input {
     border-top: 1px solid #e8e8e8;
   }
 }
+
 .content {
   display: block;
 }
+
 .timestamp {
   color: $grayLight;
 }
+
 .gravatar {
   float: left;
   margin-right: 10px;
 }
+
 aside {
   textarea {
     height: 100px;
     margin-bottom: 5px;
   }
 }
+
+.counter { 
+  float: right;
+  margin-right: 10px;
+}
+
+.error { color: #f00; }
